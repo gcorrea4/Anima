@@ -10,3 +10,8 @@ __pycache__/
 *.pyc
 .pytest_cache/
 v2/teste_wokwi_cli/build/
+
+# Ambiente virtual e pacote gerado (não versionar)
+.venv/
+venv/
+v2_para_equipe.zip
