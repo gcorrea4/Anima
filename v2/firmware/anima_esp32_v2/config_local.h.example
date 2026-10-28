@@ -1,0 +1,8 @@
+// Copie para "config_local.h" (ignorado pelo git) e preencha. Exemplo:
+#define WIFI_SSID     "MinhaRede"
+#define WIFI_SENHA    "minha-senha"
+#define MQTT_BROKER   "meu-broker.exemplo.com"
+#define MQTT_PORTA    1883
+#define MQTT_USUARIO  "anima"
+#define MQTT_SENHA    "troque-esta-senha"
+#define ANIMA_ID      "anima-COLE-O-SEU-ID"   // gere: python -c "import secrets; print('anima-' + secrets.token_hex(4))"

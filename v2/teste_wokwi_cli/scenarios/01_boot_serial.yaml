@@ -1,0 +1,14 @@
+# Boot, MPU6050 e payload v2 no Serial. Não depende de rede.
+name: 'Anima v2 - boot, MPU6050 e payload'
+version: 1
+steps:
+  - wait-serial: 'MPU6050 conectado.'
+  - wait-serial: 'Anima v2 - id='
+  - wait-serial: '"versao":2'
+  - wait-serial: '"mpu_ok":true'
+  - wait-serial: '"sensor_ok":true'
+  - delay: 4s
+  - expect-pin:
+      part-id: esp
+      name: 18
+      value: 0

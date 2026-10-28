@@ -1,0 +1,3 @@
+Entregas anteriores (Entrega 1 e Entrega 2), guardadas SEM alterações (só mudaram de pasta).
+O projeto atual está em ../v2. O v2 não depende desta pasta (usa cópias próprias em v2/firmware/base_entrega2 e v2/ia/v1_referencia).
+Pode arquivar ou apagar esta pasta inteira quando não precisar mais dos artigos e do código antigo.

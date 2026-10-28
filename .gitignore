@@ -1,0 +1,12 @@
+# Segredos: nunca versionar
+.env
+.env.*
+!.env.example
+**/.env
+BotFather - token.txt
+*token*.txt
+config_local.h
+__pycache__/
+*.pyc
+.pytest_cache/
+v2/teste_wokwi_cli/build/

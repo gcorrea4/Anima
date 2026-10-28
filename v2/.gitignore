@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+**/.env
+*token*.txt
+config_local.h
+__pycache__/
+*.pyc
+.pytest_cache/
+servidor/logs/
+servidor/dados_reais/
+teste_wokwi_cli/build/

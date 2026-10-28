@@ -1,0 +1,13 @@
+# Laço completo: Wokwi publica no broker REAL -> consumidor_v2.py (rodando em paralelo, iniciado por executar.py)
+# classifica e publica em anima/<id>/decisao -> o ESP32 simulado recebe. Textos só em ASCII de propósito.
+name: 'Anima v2 - laco com o servidor'
+version: 1
+steps:
+  - wait-serial: 'Conectando ao broker MQTT... conectado!'
+  - wait-serial: 'recebida: {"acao": "nenhum"'
+  - set-control:
+      part-id: temp1
+      name: temperature
+      value: 40.1
+  - wait-serial: '"acao": "alerta"'
+  - delay: 1s

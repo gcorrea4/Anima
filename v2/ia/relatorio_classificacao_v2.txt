@@ -1,0 +1,21 @@
+Anima v2 (dados SINTÉTICOS)
+AVISO: métricas calculadas sobre o MESMO gerador sintético do treino; medem o quão separáveis são as
+classes simuladas, NÃO o desempenho em animais reais.
+
+Janelas treino/teste: 1920/480  (origem: {'sintetico': 2400})
+Acurácia: 0.9396   F1 macro: 0.9399
+Hiperparâmetros: {'n_estimators': 200, 'max_depth': 8, 'random_state': 42, 'class_weight': 'balanced'}
+
+              precision    recall  f1-score   support
+
+     agitado      0.983     0.967     0.975       120
+       febre      1.000     1.000     1.000       120
+      normal      0.823     0.967     0.889       120
+      parado      0.980     0.825     0.896       120
+
+    accuracy                          0.940       480
+   macro avg      0.946     0.940     0.940       480
+weighted avg      0.946     0.940     0.940       480
+
+[origem=sintetico] n=480 acurácia=0.9396
+[parado+febre] n=32 recall de febre=1.000

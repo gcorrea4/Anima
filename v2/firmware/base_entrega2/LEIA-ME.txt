@@ -1,0 +1,2 @@
+Cópias SOMENTE LEITURA do diagram.json e libraries.txt da Entrega 2 (buzzer em esp:5), usadas por gerar_wokwi.py e pelos testes.
+Não edite: o diagram.json do Wokwi da v2 (GPIO 18) é GERADO a partir deste.

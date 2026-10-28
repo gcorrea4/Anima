@@ -1,0 +1,36 @@
+{
+  "versao_modelo": "v2",
+  "features": [
+    "accel_mag_media",
+    "accel_mag_std",
+    "accel_mag_max",
+    "gyro_mag_media",
+    "gyro_mag_std",
+    "gyro_mag_max",
+    "temperatura"
+  ],
+  "classes": [
+    "agitado",
+    "febre",
+    "normal",
+    "parado"
+  ],
+  "offset_coleira": 0.0,
+  "temp_febre_min_coleira": 39.5,
+  "temp_seguranca_coleira": 39.5,
+  "hiperparametros": {
+    "n_estimators": 200,
+    "max_depth": 8,
+    "random_state": 42,
+    "class_weight": "balanced"
+  },
+  "seed": 42,
+  "treinado_em": "2026-10-19T08:42:44",
+  "sklearn": "1.9.1",
+  "origens": {
+    "sintetico": 2400
+  },
+  "acuracia_teste": 0.9396,
+  "f1_macro_teste": 0.9399,
+  "aviso": "Métricas sintéticas; recalibrar offset_coleira e retreinar com dados reais."
+}

@@ -1,0 +1,3 @@
+# Scripts da IA (gerar dataset, treinar, retreinar, comparar). Inclui as dependências do servidor.
+-r ../servidor/requirements.txt
+matplotlib==3.11.2

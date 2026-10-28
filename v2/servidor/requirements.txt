@@ -1,0 +1,10 @@
+# Dependências de execução do servidor, do coletor e da IA (carregar o modelo). Versões TESTADAS em 2026-10 com Python 3.14.
+# O modelo ia/modelo_anima_rf_v2.pkl foi treinado com scikit-learn 1.9.1: outra versão pode avisar ou falhar ao carregá-lo.
+# Se mudar a versão do scikit-learn, retreine (ia/treinar_modelo_v2.py) e atualize este arquivo.
+paho-mqtt==2.1.0
+scikit-learn==1.9.1
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.1.0
+joblib==1.6.0
+requests==2.34.2

@@ -1,0 +1,1 @@
+Cópias SOMENTE LEITURA do modelo v1 (modelo_anima_rf.pkl) e do relatório (classification_report.txt) da Entrega 2, usadas por ia/comparar_v1_v2.py.

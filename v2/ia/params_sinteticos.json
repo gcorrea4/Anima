@@ -1,0 +1,34 @@
+{
+  "_aviso": "Parâmetros do dataset SINTÉTICO. Nada aqui foi medido em animais reais. Recalibre com dados reais (docs/coleta_e_retreino.md).",
+
+  "offset_coleira": 0.0,
+  "_offset_coleira": "Soma (em °C) aplicada a TODAS as temperaturas abaixo. O DS18B20 na coleira mede pele/ambiente, não a temperatura corporal; tipicamente fica alguns graus ABAIXO (offset negativo). Com 0.0 o dataset equivale à escala 'temperatura corporal' da v1. Defina após comparar o sensor com um termômetro veterinário.",
+
+  "temperatura_corporal": {
+    "parado":  [38.3, 0.30],
+    "normal":  [38.5, 0.30],
+    "agitado": [38.8, 0.35],
+    "febre":   [40.0, 0.40]
+  },
+  "_temperatura_corporal": "[média, desvio] em °C antes do offset. 'agitado' é um pouco mais quente (exercício).",
+
+  "febre_min_corporal": 39.5,
+  "margem_nao_febre": 0.2,
+  "_febre": "Febre = temperatura >= febre_min (truncada). Classes sem febre são truncadas abaixo de febre_min - margem, para não haver rótulos contraditórios. O mesmo limiar (+offset) vira o limiar de segurança do servidor e deve ser espelhado em LIMIAR_TEMP_LOCAL_C no config.h.",
+
+  "ruido_temperatura_coleira": 0.0,
+  "_ruido": "Desvio extra (°C) somado à temperatura por variação de contato pele/pelo/ambiente. Aumente ao ver a dispersão real.",
+
+  "mix_movimento_febre": {"parado": 0.35, "normal": 0.45, "agitado": 0.20},
+  "_mix": "Com que nível de movimento o animal com febre aparece. Garante 'parado + febre' no treino.",
+
+  "prob_janela_mista": 0.15,
+  "_mista": "Fração de janelas em que o comportamento muda no meio da janela (gera ambiguidade realista entre classes vizinhas).",
+
+  "movimento": {
+    "parado":  {"accel_rms": 0.06, "accel_sigma": 0.5, "gyro_rms": 0.8,   "gyro_sigma": 0.5, "freq_hz": [0.2, 2.0], "prob_pico": 0.0},
+    "normal":  {"accel_rms": 1.8,  "accel_sigma": 0.45, "gyro_rms": 30.0, "gyro_sigma": 0.5, "freq_hz": [0.8, 3.0], "prob_pico": 0.01},
+    "agitado": {"accel_rms": 6.0,  "accel_sigma": 0.4,  "gyro_rms": 130.0, "gyro_sigma": 0.45, "freq_hz": [2.0, 8.0], "prob_pico": 0.03}
+  },
+  "_movimento": "rms da componente dinâmica (m/s² e °/s) sorteado por janela de uma lognormal (mediana=rms, sigma). Valores escolhidos à mão, plausíveis mas NÃO medidos."
+}

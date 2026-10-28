@@ -1,0 +1,15 @@
+# set-control no MPU6050: aceleração 2 g em Z e rotação 100 °/s em X. Os valores numéricos são conferidos
+# por executar.py no log serial (gyro_mag_media ~ 100 °/s, accel_mag_media ~ 19,6 m/s²).
+name: 'Anima v2 - MPU6050 aceleração e giroscópio'
+version: 1
+steps:
+  - wait-serial: '"mpu_ok":true'
+  - set-control:
+      part-id: imu1
+      name: accelZ
+      value: 2
+  - set-control:
+      part-id: imu1
+      name: rotationX
+      value: 100
+  - delay: 6s

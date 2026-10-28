@@ -1,0 +1,25 @@
+# set-control no DS18B20 + proteção local de temperatura no GPIO 18 (buzzer/LED). Não depende de rede.
+name: 'Anima v2 - febre e atuador'
+version: 1
+steps:
+  - wait-serial: '"temperatura":38.5'
+  - set-control:
+      part-id: temp1
+      name: temperature
+      value: 40.1
+  - wait-serial: '"temperatura":40.'
+  - delay: 1500ms
+  - expect-pin:
+      part-id: esp
+      name: 18
+      value: 1
+  - set-control:
+      part-id: temp1
+      name: temperature
+      value: 38.5
+  - wait-serial: '"temperatura":38.5'
+  - delay: 3s
+  - expect-pin:
+      part-id: esp
+      name: 18
+      value: 0

@@ -1,0 +1,13 @@
+Acuracia: 0.9625
+F1-score (macro): 0.9627
+
+              precision    recall  f1-score   support
+
+     agitado       0.93      0.96      0.95       100
+       febre       1.00      0.97      0.98       100
+   letargico       1.00      0.99      0.99       100
+      normal       0.92      0.93      0.93       100
+
+    accuracy                           0.96       400
+   macro avg       0.96      0.96      0.96       400
+weighted avg       0.96      0.96      0.96       400

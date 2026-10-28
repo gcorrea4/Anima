@@ -1,0 +1,7 @@
+# Wi-Fi (Wokwi-GUEST) e MQTT contra o broker REAL. Falha aqui = rede do CLI sem internet ou broker inacessível.
+name: 'Anima v2 - Wi-Fi e MQTT'
+version: 1
+steps:
+  - wait-serial: 'Wi-Fi conectado'
+  - wait-serial: 'Conectando ao broker MQTT... conectado!'
+  - delay: 5s
